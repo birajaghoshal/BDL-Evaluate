@@ -96,6 +96,9 @@ class DiabeticRetinopathyDiagnosisBecnhmark(Benchmark):
     for x, y in tqdm.tqdm(ds):
       # Sample from probabilistic model
       mean, uncertainty = estimator(x)
+      print("mean, uncertainty",mean,mean.shape uncertainty)
+      uncertainty = np.mean(mean**2, axis = 1) - np.mean(mean, axis=1)**2
+      print("mean, uncertainty",mean, uncertainty)
       # Cache predictions
       y_true.append(y)
       y_pred.append(mean)
