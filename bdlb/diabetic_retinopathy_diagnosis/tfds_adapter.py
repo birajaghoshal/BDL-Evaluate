@@ -139,7 +139,9 @@ class DiabeticRetinopathyDiagnosis(tfds.image.DiabeticRetinopathyDetection):
                            target_width=self.builder_config.target_width),
           "label":
           #int(label > 1),
+          #print("label-preprocss", label)
           int(label),
+          
       }
 
   @classmethod
