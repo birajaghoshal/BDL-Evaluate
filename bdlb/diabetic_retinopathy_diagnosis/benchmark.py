@@ -246,7 +246,9 @@ class DiabeticRetinopathyDiagnosisBecnhmark(Benchmark):
           " first and then retry.")
 
     # Parse task level
+    print("level1", level)
     level = level if isinstance(level, Level) else Level.from_str(level)
+    print("level2", level)
     # Dataset tranformations
     transforms_train, transforms_eval = cls._preprocessors()
     # Apply transformations
