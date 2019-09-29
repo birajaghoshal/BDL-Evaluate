@@ -137,7 +137,8 @@ class DiabeticRetinopathyDiagnosis(tfds.image.DiabeticRetinopathyDetection):
                            target_height=self.builder_config.target_height,
                            target_width=self.builder_config.target_width),
           "label":
-          int(label > 1),
+          #int(label > 1),
+          int(label),
       }
 
   @classmethod
