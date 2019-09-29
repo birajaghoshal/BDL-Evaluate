@@ -303,7 +303,8 @@ class DiabeticRetinopathyDiagnosisBecnhmark(Benchmark):
     import tensorflow_datasets as tfds
 
     # Append `/home/$USER/.local/bin` to path
-    os.environ["PATH"] += ":/home/{}/.local/bin/".format(os.environ["USER"])
+    #os.environ["PATH"] += ":/home/{}/.local/bin/".format(os.environ["USER"])
+    os.environ["PATH"] = "/content/drive/My Drive/App/data/diabetic_retinopathy_diagnosis/"
 
     # Download all files from Kaggle
     drd = tfds.download.kaggle.KaggleCompetitionDownloader(
