@@ -127,6 +127,7 @@ class DiabeticRetinopathyDiagnosis(tfds.image.DiabeticRetinopathyDetection):
               for fname in tf.io.gfile.listdir(images_dir_path)
               if fname.endswith(".jpeg")]
     for name, label in data:
+      print("label-preprocess",label)
       yield {
           "name":
           name,
